@@ -59,7 +59,7 @@ class ListTaskComponent extends Component {
                                 <tr>
                                     <th> Task Name</th>
                                     <th> Task Asignee</th>
-                                    <th> Task Email </th>
+                                    <th> Deadline </th>
                                     <th> Actions</th>
                                 </tr>
                             </thead>
