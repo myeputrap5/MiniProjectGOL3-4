@@ -73,7 +73,7 @@ func CreateTask(w http.ResponseWriter, r *http.Request) {
 	}
 	keyVal := make(map[string]string)
 	json.Unmarshal(body, &keyVal)
-	name := keyVal["Name"]
+	name := keyVal["name"]
 	assignee := keyVal["assignee"]
 	deadline := keyVal["deadline"]
 	_, err = stmt.Exec(name, assignee, deadline)
@@ -119,7 +119,7 @@ func UpdateTask(w http.ResponseWriter, r *http.Request) {
 	}
 	keyVal := make(map[string]string)
 	json.Unmarshal(body, &keyVal)
-	name := keyVal["Name"]
+	name := keyVal["name"]
 	assignee := keyVal["assignee"]
 	deadline := keyVal["deadline"]
 	_, err = stmt.Exec(name, assignee, deadline,
@@ -151,7 +151,7 @@ func DeleteTask(w http.ResponseWriter, r *http.Request) {
 
 type Task struct {
 	ID       string `json:"id"`
-	Name     string `json:"Name"`
+	Name     string `json:"name"`
 	Assignee string `json:"assignee"`
 	Deadline string `json:"deadline"`
 }
